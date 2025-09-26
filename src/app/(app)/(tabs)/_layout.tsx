@@ -1,4 +1,3 @@
-import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import AntDesign from '@expo/vector-icons/AntDesign'
@@ -15,17 +14,17 @@ const TabsLayout = () => {
          }}
         />
         <Tabs.Screen
-         name='excercises'
+         name='transactions'
          options={{
-            title: "Excercises",
+            title: "Transactions",
             headerShown: false,
             tabBarIcon: ({size, color}) => <AntDesign name='book' size={size} color={color}/>
          }}
         />
         <Tabs.Screen
-         name='workout'
+         name='new-fix'
          options={{
-            title: "Workout",
+            title: "NewFix",
             headerShown: false,
             tabBarIcon: ({size, color}) => <AntDesign name='pluscircle' size={size} color={color}/>
          }}
@@ -55,12 +54,13 @@ const TabsLayout = () => {
             headerShown: false,
             // tabBarIcon: ({size, color}) => (
             //     <Image
-            //         source={""}
+            //         src={"/user.png"}
             //         style={{width: 28, height: 28, borderRadius: 100}}
             //         alt='profile'
             //         className='rounded-full'
             //     />
             // )
+            tabBarIcon: ({size, color}) => <AntDesign name='user' size={size} color={color}/>
          }}
         />
     </Tabs>

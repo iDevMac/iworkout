@@ -6,7 +6,7 @@ import { useAuth } from '@clerk/clerk-expo'
 
 const AppLayout = () => {
 
-  const {isLoaded, isSignedIn, userId, sessionId, getToken} = useAuth()
+  const {isLoaded, isSignedIn} = useAuth()
 
  if (!isLoaded) {
   return(
@@ -23,6 +23,7 @@ const AppLayout = () => {
         </Stack.Protected>
 
         <Stack.Protected guard={!isSignedIn}>
+          <Stack.Screen name='index' options={{headerShown: false}}/>
           <Stack.Screen name='sign-in' options={{headerShown: false}}/>
           <Stack.Screen name='sign-up' options={{headerShown: false}}/>
         </Stack.Protected>

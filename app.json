@@ -15,6 +15,18 @@
       ]
     ],
     "name": "fit-app",
-    "slug": "fit-app"
+    "slug": "fixibu",
+    "extra": {
+      "router": {
+        "origin": "https://n"
+      },
+      "eas": {
+        "projectId": "b2bbf481-235d-4333-b844-b694c1cc224f"
+      }
+    },
+    "owner": "idevmac",
+    "android": {
+      "package": "com.idevmac.fixibu"
+    }
   }
 }
